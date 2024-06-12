@@ -1,28 +1,25 @@
 package org.edu.vsu;
 
 interface SomeInterface{
-    public void doSomething();
+    void doSomething();
 }
 interface SomeOtherInterface{
-    public void doSomeOther();
+    void doSomeOther();
 }
 class SomeImpl implements SomeInterface{
     @Override
     public void doSomething(){
-        System.out.println("A");}
+        System.out.print("A");}
 }
 class OtherImpl implements SomeInterface{
     @Override
-    public void doSomething(){System.out.println("B");}
+    public void doSomething(){System.out.print("B");}
 }
 class SODoer implements SomeOtherInterface{
-    public void doSomething(){
-        System.out.println("C");}
-
     @Override
-    public void doSomeOther() {
+    public void doSomeOther(){
+        System.out.print("C");}
 
-    }
 }
 class SomeBean{
     @AutoInjectable
